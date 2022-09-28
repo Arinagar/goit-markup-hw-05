@@ -135,6 +135,7 @@ img {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .header .current {
@@ -186,6 +187,10 @@ img {
   display: flex;
   gap: 50px;
   margin-left: auto;
+
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header .container {
@@ -218,6 +223,10 @@ img {
   text-align: center;
   font-family: inherit;
   padding: 6px 22px;
+
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main .buttons-list {
   display: flex;
@@ -333,6 +342,7 @@ img {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+
 }
 
 .backdrop {
@@ -344,6 +354,14 @@ img {
   height: 100%;
 
   background-color: var(--inscription-bg);
+
+  opacity: 1;
+  visibility: visible;
+
+  transition-property: opacity, visibility;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .close.button {
@@ -408,11 +426,9 @@ img {
 .s-child .container {
   display: flex;
   justify-content: center;
+  gap: 30px;
 }
 
-.s-child .list .item + .item {
-  margin-left: 30px;
-}
 
 .s-child .item {
   position: relative;
@@ -504,7 +520,9 @@ img {
 
 .floating-text {
   position: absolute;
-  top: 100%;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
   padding: 63px 24px;
 
   width: 100%;
@@ -516,13 +534,17 @@ img {
   line-height: 1.55;
   text-align: left;
   color: var(--fourth-color);
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .project-card:hover .floating-text,
 .project-card:focus .floating-text {
-  transform: translateY(-100%);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+
 }
 
 /* ICONS */
@@ -549,14 +571,15 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus {
   background-color: var(--third-background-color);
   color: var(--fourth-color);
-
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link-icon {
@@ -577,15 +600,16 @@ img {
   align-items: center;
   justify-content: center;
   outline: 1px solid var(--second-border-color);
+
+  transition-property: color, outline-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .partner-link:hover,
 .partner-link:focus {
   color: var(--first-color);
   outline-color: var(--first-color);
-
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .partner-icon {
   fill: currentColor;
@@ -679,13 +703,14 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .f-social-link:hover,
 .f-social-link:focus {
   background-color: var(--third-background-color);
   color: var(--fourth-color);
-
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
