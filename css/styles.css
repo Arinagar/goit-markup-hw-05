@@ -382,6 +382,12 @@ img {
   align-items: center;
 }
 
+.close.button:hover, .close.button:focus {
+  fill: var(--first-color);
+  border: 1px solid var(--first-color);
+  cursor: pointer;
+}
+
 /* MODAL END */
 
 .f-child .container {
