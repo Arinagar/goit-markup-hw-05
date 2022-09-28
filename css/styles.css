@@ -497,9 +497,7 @@ img {
 
 .floating-text {
   position: absolute;
-  left: 0px;
-  bottom: 0px;
-  transform: translate(-100%, -100%);
+  top: 100%;
   padding: 63px 24px;
 
   width: 100%;
@@ -515,7 +513,7 @@ img {
 
 .project-card:hover .floating-text,
 .project-card:focus .floating-text {
-  transform: translate(0%, 0%);
+  transform: translateY(-100%);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
